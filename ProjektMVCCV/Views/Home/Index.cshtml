@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" id="ElementBackground">
+    <h1>Björn Saeland</h1>
+    <p class="lead">Detta är en webbsida som visar delar utav mitt CV samt implemeterar bitar utav flertalet tekniker.<br />
+    Fokus med denna sida är att visa en liten del utav vad jag kan på webben, inte att göra en ren och fin, snygg sida.<br />
+    Språken som används är C#, HTML, CSS och JavaScript.</p>
+</div>
+
+<div class="row" id="ElementBackground">
+    <div class="col-md-4">
+        <h2>Personligt brev</h2>
+        <p>
+            I systemutvecklingsprogrammet kan man under sitt tredje år välja en utav två vägar som är lite mer specialiserade.<br />
+            1: Programmering<br />
+            2: Verksamhetsutveckling<br />
+
+        </p>
+        <p>
+        <a class="btn btn-default" @Html.ActionLink("Mer om mig", "About", "Home")</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>CV</h2>
+        <table>
+            <tr>
+                <th>
+                    Kompetens
+                </th>
+            <tr>
+                <td>C#</td>
+                <td>Java</td>
+                <td>VisualStudio</td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>ASP.net</td>
+                <td>MVC</td>
+                <td>Windows Forms</td>
+
+            </tr>
+            <tr>
+                <td>Razor</td>
+                <td>Linq</td>
+                <td>Services (WCF)</td>
+            </tr>
+        </table>
+        <p>
+            <a class="btn btn-default" @Html.ActionLink("Fler i CV", "CV", "Home")</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Implementation</h2>
+        <p>Webbsidan är knyten till en service som innehåller en par Items (kan vara varor eller vad som helst).<br />
+            Servicen(eller tjänsten) implementerar CRUD funktioner som webbsidan kan använda.</p>
+        <p>
+            <a class="btn btn-default" @Html.ActionLink("Teknik", "Teknik", "Home")</a>
+        </p>
+    </div>
+</div>

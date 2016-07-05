@@ -1,0 +1,42 @@
+﻿@model ProjektMVCCV.ServiceReferenceItemCRUDCV.Item
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div id="ElementBackground">
+
+        <hr/>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div>
+
+            @Html.LabelFor(model => model.ItemName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.ItemName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ItemName, "", new { @class = "text-danger" })
+
+            <hr />
+
+            @Html.LabelFor(model => model.Attribute, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.Attribute, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Attribute, "", new { @class = "text-danger" })
+
+            <hr />
+
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Skapa ny" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "GetAllItems")
+</div>

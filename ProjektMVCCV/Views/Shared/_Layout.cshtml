@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BKSMVC</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+
+
+<body class="tinted-image">
+    @*id="bgvid"*@
+        <video id="video" autoplay loop>
+            <source src="~/BakgrundsFilm/sky.mov" type="video/mov">
+            <source src="http://video2.ignitemotion.com/files/mp4/abstSpin01.mp4" type="video/mp4">
+            @*<source src="http://www.itera.se//Stream/Global/Iteramovie01.webm" type="video/webm">
+            <source src="http://www.itera.se//Stream/Global/Iteramovie01.mp4" type="video/mp4">*@ 
+        </video>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="NavBarBackground">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Björn Saeland CV", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Hem", "Index", "Home")</li>
+                    <li>@Html.ActionLink("OM", "About", "Home")</li>
+                    <li>@Html.ActionLink("CV", "CV", "Home")</li>
+                    <li>@Html.ActionLink("Teknik", "Teknik", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("CRUD Service", "GetAllItems", "Item")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <p>AV: Björn Saeland</p>
+        </footer>
+    </div>
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
