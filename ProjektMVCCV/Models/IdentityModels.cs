@@ -29,5 +29,7 @@ namespace ProjektMVCCV.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ProjektMVCCV.Models.ShuffleModels> ShuffleModels { get; set; }
     }
 }

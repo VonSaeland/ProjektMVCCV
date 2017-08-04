@@ -1,0 +1,26 @@
+﻿@model ProjektMVCCV.Models.ShuffleModels
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Shuffle Letters</h2>
+
+<table class="table">
+        <tr>
+            <td>
+                @Html.DisplayFor(Item => Model.Default)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(Item => Model.Shuffled)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(Item => Model.Sorted)
+            </td>
+        </tr>
+</table>

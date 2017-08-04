@@ -27,7 +27,6 @@ namespace ProjektMVCCV.Controllers
             return View(ItemDB.GetItemById(id));
         }
 
-
         // GET: Item/Create
         public ActionResult Create()
         {
