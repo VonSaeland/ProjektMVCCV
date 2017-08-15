@@ -9,8 +9,7 @@ namespace ProjektMVCCV.Models
 {
     class ItemModel
     {
-        //[Key]
-        public string Id { get; }
+        public string Id        { get; }
         public string ItemNamne { get; set; }
         public string Attribute { get; set; }
     }

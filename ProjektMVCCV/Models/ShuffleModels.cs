@@ -7,12 +7,9 @@ namespace ProjektMVCCV.Models
 {
     public class ShuffleModels
     {
-        //[System.ComponentModel.DataAnnotations.Key]
-        //public int Id { get; set; }
-        public string Default { get; set; }
-        public string Shuffled { get; set; }
-        public string Sorted { get; set; }
-
-        //public IList<string> ResultList { get; set; }
+        public string Default   { get; set; }
+        public string Shuffled  { get; set; }
+        public string Sorted    { get; set; }
+        public string Number    { get; set; }
     }
 }

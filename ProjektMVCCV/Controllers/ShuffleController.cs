@@ -19,7 +19,7 @@ namespace ProjektMVCCV.Controllers
                 var Strings = new ShuffleModels();
                 Random rnd = new Random();
                 string  RandomCha = "";
-                char[] charAlpha = "abcdefghijklmnopqrstuvxyzåäö".ToCharArray(); //jag har bara 20 chars här men det går bra med fler 
+                char[] charAlpha = "abcdefghijklmnopqrstuvxyzåäö".ToCharArray();
                 int random;
 
                 #region hur jag löste det
@@ -48,7 +48,20 @@ namespace ProjektMVCCV.Controllers
                 {
                     Strings.Sorted = Strings.Sorted + z.ToString();
                 }
+
+                //nummer
+                int num;
+                foreach (var a in strShuffled)
+                {
+                    if (strShuffled.IndexOf(a) != -1)
+                    {
+                        num = strShuffled.IndexOf(a) + 1;
+                        char upper = char.ToUpper(a);
+                        Strings.Number = Strings.Number + " " + a + ": index " + num.ToString() + " alfabetiskt nummer: " + (upper - 'A' + 1) + "  |  ";
+                    }
+                }
                 #endregion
+
                 #region Jag hittade dock detta senare, jag hade användt koden nedan men du skall ju få någonting orginal ifrån mig därav den övre regionen
                     //Random rnd = new Random();
                     //string RndString = string.Empty;
